@@ -16,7 +16,7 @@ class Machine:
     ip = 0
     ptr = 0
     loop = 0
-    buf = [0] * 100
+    buf = [0] * 10000
 
     getchar_handler = None
     putchar_handler = None
@@ -48,7 +48,7 @@ class Machine:
         if len(self.src) == 0:
             return False
         i = self.insn()
-        print("insn: ", i, "(", self.ip, ")")
+        #print("insn: ", i, "(", self.ip, ")")
         if i == '>':
             self.ptr += 1
         elif i == '<':
