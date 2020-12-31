@@ -85,11 +85,6 @@ class App:
                     if self.pad[0] < p[0] and p[0] < self.pad[0]+40:
                         self.insn = c.c
                         self.bf.src += self.insn
-                        #if self.bf.run_step():
-                        #    pass
-                        #else:
-                        #    self.bf.reset()
-                        #    self.output = ""
                     c.init(random.randint(10, 200-10))
 
     def draw(self):
@@ -114,10 +109,6 @@ class App:
 
     def putchar(self, c: int):
         self.output += chr(c)
-
-sb64 = "QlpoOTFBWSZTWdq2ejwAA6jaAH/4AAsABQAKUAR4eKmdVQO6jjvCUxE0hUJ6mCU9FJqeimgAk9VSmjEMANqg0AABU1UiaaaDaTdu2pZbLEtbKICU0TbUxIrLYSU0JEtrGSjZtJk0SrQyy0RiUlYktNRILNNSZNRkLa0pJE1qVE2GHLNyNrFtibaY1mWbQ1sgsmLQybZw4ykpbUqhhta42W4gSZmlBsUCLSkpFJFLWWZum2CuK1WRSDSIUSQoYZITE0hZlNmEUkSEqVKFUVVOoe+53HXzZwfEcyzLXkHRFRw8aFavWOJrifHTXzdWPzg+9Zor7m7PiTteW+atIIIu5XjPXkqnJ011cT3BIwYPHnlmCSQa8Rm2cLxLjNbqSVtYSZ5SmpNJFhW7U5cic31TuSNno4ayxLXuPKY8p+nqd25HBsN9bomtuVHkg+btxcik1SNx1PNTSRWNCM5dqi33FsvGIYy4pCanSF4zRQNX4VRVU/uI99fkwWAhl58K2Wfw/P1zvO+b2jzl13a7eyjvb/5NCFF4M0t1BnJ5GounEt2Gerik4e52ck21va8ZuxdW707uTG00+rPXmeDxNfl1PmN/T7i7BkXCRXxxc+3yZ0dx9px73JvMi+VQUcs3LPB/qtjOWegmta2axGmTay2NNYtZvckoTSyaKgtIpWKptbcCZbTWzRZim1M1mlLTVlwEiGYJsBGNaQym2ZY20m0Yo2ixYtpNaI3rX5pb2T1lMcoUpSQsi1SPIIqatpTOxfc62/VPQiiXDpW4yk9AzSU2itYq6wmNhS1ksGkIIKihEcsJVsdYIhopSt8CG3pT1olMSHzCK8gQHxdyRThQkNq2ejw="
-src=bz2.decompress(base64.b64decode(sb64.encode())).decode()
-print(src)
 
 if __name__ == '__main__':
     app = App()

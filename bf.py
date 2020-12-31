@@ -16,7 +16,7 @@ class Machine:
     ip = 0
     ptr = 0
     loop = 0
-    buf = [0] * 10000
+    buf = [0] * 1000
 
     getchar_handler = None
     putchar_handler = None
@@ -91,7 +91,8 @@ class Machine:
         self.src = src
         print("src: ", src)
         while self.ip < len(self.src):
-            self.run_step()
+            if not self.run_step():
+                break
 
 if __name__ == '__main__':
     print("usage> ./bf.py src")
